@@ -20,6 +20,7 @@ const Home: NextPage = ({ posts }: any) => {
   console.log(posts)
   return (
     <div>
+      <h1>eLegal CodeCamp - [WIP] 🏗️</h1>
       <ol>
         {posts.map((post: any) => (
           <li key={post.id}>
