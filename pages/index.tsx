@@ -3,8 +3,9 @@ import Link from 'next/link'
 import invariant from 'tiny-invariant'
 import { DATABASE_ID, getDatabase } from '../lib/notion'
 import Terminal from '../lib/components/AnimatedTerminal';
-import { Row, Col, Container, Text, Spacer, Button } from '@nextui-org/react';
+import { Row, Col, Text, Spacer, Button } from '@nextui-org/react';
 import { useMediaQuery } from 'react-responsive';
+// import '../styles/Home.module.css'
 
 export const getStaticProps: GetStaticProps = async () => {
   invariant(DATABASE_ID, 'DATABASE_ID is required')
@@ -20,7 +21,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home: NextPage = ({ posts }: any) => {
   console.log(posts)
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 })
 
   return (
     <>
@@ -41,19 +42,15 @@ const Home: NextPage = ({ posts }: any) => {
             : null
         )}
       </Row>
-      <ol>
-        {posts.map((post: any) => (
-          <li key={post.id}>
+      {posts.map((post: any) => (
+        <Row key={post.id}>
+          <Col>
             <Link href={`/${post.id}`} passHref>
-              <a>
-                {/* <Text text={post.properties.Name.title} /> */}
-                {/* <Text>{post.properties.Name.title}</Text> */}
-              </a>
+              {/* <Text>{post.properties.Name.title[0].plain_text}</Text> */}
             </Link>
-          </li>
-        ))}
-
-      </ol>
+          </Col>
+        </Row>
+      ))}
     </>
   )
 }

@@ -1,0 +1,24 @@
+@media screen and (min-width: 768px) {
+  .landing {
+    background-image: url("/landing_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    /* position: relative; */
+    width: 100%;
+    background-size: cover;
+    /* z-index: -5; */
+  }
+
+  .landing::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* z-index: -5; */
+  }
+}
