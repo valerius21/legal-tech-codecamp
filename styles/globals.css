@@ -4,6 +4,20 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background-image: url("/landing_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* height: 100vh; */
+}
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    background-image: url("/landing_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
 }
 
 /* body {

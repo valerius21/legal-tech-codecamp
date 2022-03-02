@@ -10,7 +10,7 @@ const Navbar = () => {
                         eLegal | Code_Camp
                     </Text>
                 </Col>
-                <Button color={'gradient'}>Anmelden</Button>
+                <Button bordered color={'gradient'}>Anmelden</Button>
             </Row>
         </Container>
     )
